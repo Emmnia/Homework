@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://freepngimg.com/download/cat/35425-9-black-cat-transparent.png" type="image/png">
+    <title>Опрос для владельцев животных</title>
+</head>
+<body>
+<h1>Опрос для владельцев животных</h1>
+<form>
+    <div>
+        <label for="name">Кличка питомца</label>
+        <input type="text" id="name" required>
+    </div>
+    <label for="species-select">Вид животного:</label>
+    <select name="species" id="species-select" required>
+        <option value="">-- Выберите --</option>
+        <option value="cat">Кошка</option>
+        <option value="owl">Сова</option>
+        <option value="frog">Жаба</option>
+        <option value="rat">Крыса</option>
+    </select>
+    <div>
+        <label for="breed">Порода питомца (если применимо):</label>
+        <input type="text" id="breed" name="breed"/>
+    </div>
+    <div>
+        <p>Пол:</p>
+		<input type="radio" id="male" name="gender" value="male" required>
+		<label for="male">Самец</label>
+		<input type="radio" id="female" name="gender" value="female" required>
+		<label for="female">Самка</label>
+    </div>
+    <div>
+        <p>Какой корм предпочитает (выберите все подходящие варианты):</p>
+        <input type="checkbox" name="feed" value="dry"/>
+        Сухой <br/>
+        <input type="checkbox" name="feed" value="wet"/>
+        Влажный <br/>
+        <input type="checkbox" name="feed" value="combi"/>
+        Комбинированный <br/>
+        <input type="checkbox" name="feed" value="natural"/>
+        Натуральный <br/>
+        </div>
+    <div>
+        <label for="photo">Фото питомца</label><br>
+        <input type="file" id="photo" name="photo"/>
+        </div>
+    <div>
+        <label for="comment">Комментарий владельца:</label><br>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </div>
+    <fieldset>
+        <legend>Имя и контакты владельца</legend>
+        <div>
+            <label for="ownername">Имя владельца</label>
+            <input type="text" id="ownername" name="ownername"/>
+        </div>
+        <div>
+            <label for="telnmb">Номер телефона</label>
+            <input type="tel" placeholder="+7 (xхx) xxx-xx-xx" id="telnmb" name="telnmb" required/>
+        </div>
+        <div>
+            <label for="email">Адрес электронной почты</label>
+            <input type="email" id="email" name="email" required/>
+        </div>
+    </fieldset>
+    <button type="submit">Отправить</button>
+    </form>    
+</body>
+</html>

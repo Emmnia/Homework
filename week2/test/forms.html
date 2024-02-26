@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><input type="text"></div>
+    <div><input type="file" name="" id=""></div>
+    <div><input type="date" name="" id=""></div>
+    <div><input type="checkbox" name="" id=""></div>
+    <div><input type="radio" name="" id=""></div>
+    <div><input type="password" name="" id=""></div>
+    <div><textarea name="" id="" cols="30" rows="10"></textarea></div>
+    <div>
+        <select name="" id="">
+            <option value="1">opt1</option>
+            <option value="2">opt2</option>
+            <option value="3">opt3</option>
+        </select>
+    </div>
+    <h1>Регистрация</h1>
+    <form action="script.php" method="post">
+        <!-- по какому скрипту и каким методом отправить данные на сервер: гет - открытый способ, пост - более безопасный, защищенный. но: более современный метод - обращение не к серверному скрипту, а к клиентскому, а он уже обратится к серверному, поэтому экшн и метод указываются теперь очень редко-->
+    <div>
+        <label for="name">Имя</label>
+        <input type="text" id="name"/>
+        </div>
+    <div>
+        <label for="surname">Фамилия</label>
+        <input type="text" id="surname"/>
+    </div>
+    <div>
+        <label for="login">Придумайте логин</label>
+        <input type="text" id="login"/>
+    </div>
+    <fieldset>
+        <legend>Пароли</legend>
+    <div>
+        <label for="pwd">Придумайте пароль</label>
+        <input type="password" id="pwd"/>
+    </div>
+    <div>
+        <label for="copypwd">Повторите пароль</label>
+        <input type="password" id="copypwd"/>
+    </div>
+</fieldset>
+    <div>
+        <label for="telnmb">Номер телефона</label>
+        <input type="tel" id="telnmb"/>
+    </div>
+    <div>
+        <label for="sex">Укажите ваш пол</label><br>
+        Женский<input type="radio" name="sex"/><br>
+        Мужской<input type="radio" name="sex"/>
+    </div>
+    <button>Зарегистрироваться</button>
+    <div>Нажимая кнопку "Зарегистрироваться":
+        <div>
+            <input type="checkbox" name="" id="">Я принимаю условия <a href="...">Пользовательского соглашения</a>
+        </div>
+    </div>
+</form>
+</body>
+</html>
+<!-- если элемент не подпадает под какой-то из основных семантических тегов, для ввода с переносом строки берем див, для абзацев текста - р, для маленьких элементов без переноса строки - спан -->
