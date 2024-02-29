@@ -1,0 +1,196 @@
+.body {
+    font-family: "Inter", sans-serif;
+    color: white;
+    background-color: #1b5871;
+}
+
+.header {
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#logo {
+    width: 190px;
+    height: 62px;
+}
+.list {
+    display: flex;
+}
+.list-item {
+    padding-right: 40px;
+    list-style-type: none;
+}
+.list a {
+    text-decoration: none;
+    color: white;
+}
+
+#callback {
+    width: 161px;
+    height: 40px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.main {
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+}
+
+.article {
+    padding-left: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 48px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.about {
+    display: flex;
+}
+
+.about-points {
+    display: flex;
+    
+}
+
+.about-points p {
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-points img {
+    padding-right: 10px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+}
+
+#consult {
+    width: 310px;
+    height: 70px;
+}
+
+.pressvideo {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#section-video {
+    margin-right: 10px;
+    padding: 10px;
+    width: 300px;
+    border: 1px inset white;
+    border-radius: 10px;
+
+}
+
+#video {
+    width: 300px;
+    height: 200px;
+    border: 0;
+}
+
+#section-press {
+    margin-right: 10px;
+    padding: 10px;
+    align-items: flex-start;
+    border: 1px inset white;
+    border-radius: 10px;
+}
+
+#rbk {
+    width: 300px;
+    height: 200px;
+}
+
+.aside {
+    padding: 10px;
+}
+
+#terminal {
+    width: 520px;
+    height: 650px;
+}
+
+#eclipse {
+    text-align: center;
+    font-size: 20px;
+}
+
+.footer {
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-evenly;
+}
+
+h3 {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+#bottomnav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#tagline {
+    padding-right: 50px;
+}
+
+#tagline p {
+    padding: 5px 10px 0 0;
+    flex-wrap: wrap;
+    width: 190px;
+    font-size: 12px;
+}
+
+.bottomnav-items {
+    padding-right: 50px;
+}
+
+.bottom-list a {
+    text-decoration: none;
+}
+
+.bottom-list-item {
+    margin-left: -40px;
+    padding: 5px 10px 0 0;
+    list-style-type: none;
+    font-size: 12px;
+}
+
+.bottom-list-item a {
+    color: white;
+}
+
+.bottom-list-item p {
+    margin: 0;
+    padding: 5px 10px 0 0;
+}
+
+#cities {
+    display: flex;
+}

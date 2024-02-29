@@ -145,10 +145,11 @@ h1 {
 
 #tagline {
     font-weight: 500;
+    align-items: baseline;
 }
 
 #tagline h2 {
-    font-size: 25px;
+    font-size: 30px;
     color: #181E4B;
 }
 
