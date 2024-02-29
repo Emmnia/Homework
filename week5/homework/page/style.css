@@ -65,7 +65,7 @@ h2 {
 
 .about-points {
     display: flex;
-    
+    align-items: center;
 }
 
 .about-points p {
