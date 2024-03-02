@@ -28,31 +28,31 @@
 }
 
 #callback {
+    padding: 0;
     width: 161px;
     height: 40px;
     background: none;
     border: none;
-    padding: 0;
     cursor: pointer;
 }
 
 .main {
-    /* margin: 0 auto; */
     display: flex;
     justify-content: center;
 }
 
 .article {
-    padding-left: 70px;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
+    padding-left: 70px;
 }
 
 h1 {
     margin-bottom: 10px;
-    font-weight: 600;
     font-size: 48px;
+    font-weight: 600;
+
 }
 
 h2 {
@@ -69,24 +69,24 @@ h2 {
 }
 
 .about-points p {
-    padding-right: 10px;
     display: flex;
     flex-wrap: wrap;
+    padding-right: 10px;
 }
 
 .about-points img {
-    padding-right: 10px;
     width: 70px;
     height: 70px;
     display: flex;
+    padding-right: 10px;
 }
 
 #consult {
     width: 310px;
     height: 70px;
+    padding: 0;
     background: none;
     border: none;
-    padding: 0;
     cursor: pointer;
 }
 
@@ -97,9 +97,9 @@ h2 {
 }
 
 #section-video {
+    width: 300px;
     margin-right: 10px;
     padding: 10px;
-    width: 300px;
     border: 1px inset white;
     border-radius: 10px;
 
@@ -134,8 +134,8 @@ h2 {
 }
 
 #eclipse {
-    text-align: center;
     font-size: 20px;
+    text-align: center;
 }
 
 .footer {
@@ -145,8 +145,8 @@ h2 {
 }
 
 h3 {
-    padding: 0;
     margin-bottom: 0;
+    padding: 0;
 }
 
 h4 {
@@ -165,9 +165,9 @@ h4 {
 }
 
 #tagline p {
+    width: 190px;
     padding: 5px 10px 0 0;
     flex-wrap: wrap;
-    width: 190px;
     font-size: 12px;
 }
 
