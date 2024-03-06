@@ -1,5 +1,4 @@
 .header {
-    width: 100vw;
     height: 50px; 
     padding: 10px;
     background-color: rgb(225, 225, 225);
@@ -13,62 +12,47 @@ h1, h2 {
 
 .main {
     display: grid;
-    width: 100vw;
     height: 100vh;
-    padding-left: 20px;
-    grid-template-columns: 1fr 1fr 300px;
+    grid-template-areas: "mainheading mainheading aside"
+                         "mainheading mainheading aside"
+                         "more1 more2 aside"
+                         "more3 more3 aside";
+    grid-template-columns: 1fr 1fr 0.5fr;
     grid-template-rows: repeat(4, 1fr);
-    gap: 20px;
     background-color: rgb(255, 241, 224);
 }
 
 #mainheading {
-    grid-row: 1 / 3;
-    grid-column: 1 / span 2;
-    text-align: center;
+    grid-area: mainheading;
 }
 
-.more12 {
+.aside {
+    grid-area: aside;
+    background-color: rgb(199, 236, 199);
+}
+
+.more123 {
+    margin: 20px;
     padding: 10px;
     background-color: rgb(232, 207, 177);
 }
 
 #more1 {
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
+    grid-area: more1;
 }
 
 #more2 {
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
+    grid-area: more2;
 }
 
 #more3 {
-    margin-bottom: 20px;
-    padding: 10px;
-    grid-column: 1 / span 2;
-    background-color: rgb(232, 207, 177);
-}
-
-#more3 {
-    margin-bottom: 20px;
-    padding: 10px;
-    grid-row: 4/5;
-    grid-column: 1 / span 2;
-    background-color: rgb(232, 207, 177);
-}
-
-.aside {
-    grid-area: 1 / 3 / 5 / 4;
-    text-align: center;
-    background-color: rgb(199, 236, 199);
+    grid-area: more3;
 }
 
 .footer {
-    width: 100vw;
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat( 4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;    
     justify-content: space-evenly;
     background-color: rgb(225, 225, 225);
