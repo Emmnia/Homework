@@ -86,7 +86,7 @@
     font-family: 'Gilroy Light';
     font-size: 21px;
     color: white;
-    background: rgb(209, 106, 29)
+    background: rgb(209, 106, 29);
 }
 
 #shop:hover {
@@ -177,6 +177,7 @@ h4 {
     grid-template-rows: 1fr;    
     align-items: center;
     justify-items: center;
+    background-color: rgb(245, 224, 208);
 }
 
 .bottomtext {
