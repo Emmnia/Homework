@@ -1,0 +1,196 @@
+@font-face {
+    src: url(assets/fonts/Gilroy-ExtraBold.otf);
+    font-family: 'Gilroy ExtraBold';
+}
+
+@font-face {
+    src: url(assets/fonts/Gilroy-Light.otf);
+    font-family: 'Gilroy Light';
+}
+
+#topnav-list {
+    display: grid;
+    margin: 0 auto;
+    padding: 10px 0 10px 0;
+    grid-template-columns: 4fr repeat(4, 1fr);
+    grid-template-rows: 50px;
+    align-items: center;
+    justify-items: center;
+}
+
+#logo {
+    grid-column: 1/2;
+    justify-self: start;
+    padding-left: 40px;
+}
+
+#about {
+    grid-column: 2/3;
+}
+
+#furniture {
+    grid-column: 3/4;
+}
+
+#service {
+    grid-column: 4/5;
+}
+
+#blog {
+    grid-column: 5/6;
+}
+
+.list-item {
+    font-family: 'Gilroy ExtraBold';
+    font-size: 19px;
+    list-style-type: none;
+}
+
+.list a {
+    text-decoration: none;
+    color: #000;
+}
+
+.main {
+    display: grid;
+    margin: 10px;
+    grid-template-areas: "mainheading mainheading . lamps"
+                         "maintext maintext shellchair lamps"
+                         "shop retrochair shellchair item3"
+                         ". retrochair item2 ."
+                         ". item1 . .";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 150px);
+}
+
+#mainheading {
+    padding-left: 30px;
+    grid-area: mainheading;
+}
+
+#maintext {
+    padding-left: 30px;
+    margin: 0;
+    grid-area: maintext;
+    font-family: 'Gilroy Light';
+    font-size: 23px;
+}
+
+#shop {
+    grid-area: shop;
+    width: 197px;
+    height: 60px;
+    margin-left: 30px;
+    border: none;
+    border-radius: 32px;
+    font-family: 'Gilroy Light';
+    font-size: 21px;
+    color: white;
+    background: rgb(209, 106, 29)
+}
+
+#shop:hover {
+    cursor: pointer;
+}
+
+#shop:active {
+    box-shadow: 0px 0px 30px 10px rgba(239, 108, 7, 0.24);
+}
+
+#retrochair {
+    grid-area: retrochair;
+}
+
+#item1 {
+    grid-area: item1;
+    width: 300px;
+    background-color: #f9f9f9;
+}
+
+#item1 h3, h4, p {
+    padding-left: 5px;
+}
+
+#shellchair {
+    grid-area: shellchair;
+}
+
+#item2 { 
+    grid-area: item2;
+    width: 300px;
+    background-color: #f0c7b1;
+}
+
+#item2 h3, h4, p {
+    padding-left: 5px;
+}
+
+#lamps {
+    grid-area: lamps;
+}
+
+#item3 {
+    grid-area: item3;
+    width: 300px;
+    background-color: #dfe7f2;
+}
+
+#item3 h3, h4, p {
+    padding-left: 5px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gilroy Light';
+    font-size: 60px;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gilroy ExtraBold';
+    font-size: 55px;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gilroy ExtraBold';
+    font-size: 39px;
+}
+
+h4 {
+    font-family: 'Gilroy ExtraBold';
+    font-size: 20px;
+}
+
+.description {
+    font-family: 'Gilroy Light';
+    font-size: 15px;
+}
+
+.footer {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;    
+    align-items: center;
+    justify-items: center;
+}
+
+.bottomtext {
+    font-family: 'Gilroy Light';
+    font-size: 15px;
+}
+
+.bottomnav-item {
+    margin-left: -35px;
+    font-family: 'Gilroy Light';
+    font-size: 15px;
+    list-style-type: none;
+}
+
+.socials-icon {
+    width: 50px;
+}
