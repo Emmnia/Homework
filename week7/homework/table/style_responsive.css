@@ -17,16 +17,16 @@ h1, h2 {
 .main {
     display: flex;
     flex-grow: 1;
-    max-width: 1920px;
     min-height: fit-content;
+    max-width: 1920px;
     margin: auto;
 }
 
-.article {
-    min-height: calc(100vh - 100px);
+.article {    
     display: flex;
-    width: 100%;
     flex-direction: column;
+    min-height: calc(100vh - 100px);
+    width: 100%;
     justify-content: space-between;
     background-color: rgb(255, 241, 224);
 }
@@ -58,8 +58,8 @@ h1, h2 {
 }
 
 .footer {
-    min-height: 50px;
     display: flex;
+    min-height: 50px;
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: rgb(225, 225, 225);
