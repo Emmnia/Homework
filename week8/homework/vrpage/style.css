@@ -88,6 +88,8 @@
 
 .main-one {
     display: flex;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .main-one__description__button {
@@ -147,6 +149,7 @@
     .main {
         margin: 0 20px;
         display: block;
+        text-align: left;
     }
     
     .heading-text {
@@ -167,10 +170,14 @@
     .main-one {
         margin-bottom: 20px;
     }
+
+    .main-one__description {
+        padding-right: 20px;
+    }
     
     .main-one__description__button {
         margin-top: 24px;
-        margin-left: auto;
+        margin-left: 0;
         display: block;
     }
 
