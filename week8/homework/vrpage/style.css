@@ -1,0 +1,200 @@
+@font-face {
+    src: url(assets/fonts/IntroDemo-BlackCAPS.otf);
+    font-family: 'Intro';
+}
+
+@font-face {
+    src: url(assets/fonts/RobotoSlab-VariableFont_wght.ttf);
+    font-family: 'Roboto';
+}
+
+.header {
+    padding: 50px 76px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    font-family: 'Intro', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    background: rgb(82, 34, 208);
+    text-align: center;
+    cursor: pointer;
+}
+
+.button_small {
+    width: 115px;
+    height: 38px;
+    font-size: 13px;
+}
+
+.button_large {
+    padding: 25px 0;
+    width: 270px;
+    height: 84px;
+    font-size: 35px;
+}
+
+.heading-text {
+    font-family: 'Intro', sans-serif;
+    font-size: 60px;
+    line-height: 120%;
+}
+
+.heading-text_small {
+    margin-top: 25px;
+    font-family: 'Intro', sans-serif;
+    font-size: 30px;
+    line-height: 120%;
+}
+
+.regular-text {
+    font-family: 'Roboto', serif;
+    font-size: 20px;
+    line-height: 160%;
+}
+
+.list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-type: none;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:visited {
+    color: rgb(82, 34, 208);
+}
+
+.main {
+    margin: 0 76px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+    gap: 70px;
+}
+
+.footer {
+    padding: 50px 76px;
+}
+
+.main-one {
+    display: flex;
+}
+
+.main-one__description__button {
+    margin-top: 34px;
+    margin-left: 50%;
+}
+
+.main-one__image {
+    position: relative;
+    right: -100px;
+}
+
+.list__item {
+    margin-right: 34px;
+}
+
+.card {
+    padding: 0 20px;
+}
+
+.card_subscribe {
+    padding-bottom: 55px;
+    background: rgb(236, 97, 91);
+}
+
+.card_subscribe__heading {
+    color: white;
+}
+
+.card_subscribe__input {
+    width: 323px;
+    height: 50px;
+}
+
+.card_subscribe__input::placeholder {
+    padding-left: 14px;
+    font-family: 'Roboto', serif;
+    font-size: 20px;
+    color: black;
+}
+
+.button_small_subscribe {
+    margin-top: 23px;
+    padding: 12px 0;
+    width: 135px;
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 20px;
+    }
+
+    .header__logo {
+        width: 180px;
+    }
+    
+    .main {
+        margin: 0 20px;
+        display: block;
+    }
+    
+    .heading-text {
+        font-size: 30px;
+    }
+
+    .button_large {
+        padding: 10px 0;
+        width: 115px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .button_large__image {
+        width: 15%;
+    }
+
+    .main-one {
+        margin-bottom: 20px;
+    }
+    
+    .main-one__description__button {
+        margin-top: 24px;
+        margin-left: auto;
+        display: block;
+    }
+
+    .main-one__image {
+        margin-top: 20px;
+        width: 100vw;
+        left: 0;
+    }
+
+    .card_subscribe {
+        padding-bottom: 25px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list__item {
+        margin-right: 30px;
+    }
+
+}
