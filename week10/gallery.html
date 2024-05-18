@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CapyGallery</title>
+    <script src="https://kit.fontawesome.com/3b773055fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/gallery.css">
+</head>
+<body>
+    <section class="gallery">
+        <i onclick="changeImage()" class="fa-solid fa-circle-chevron-left gallery__arrow"></i>
+        <img id="image" class="gallery__image" src="assets/capy-flowers.png" alt="capybara">
+        <i onclick="changeImage()" class="fa-solid fa-circle-chevron-right gallery__arrow"></i>
+    </section>
+    <section class="price">
+        <input id="quantity" class="price__quantity"></input>
+        <button onclick="calculateTotalPrice()" class="price__button">Узнать стоимость</button>
+        <p id="message" class="price__total"></p>
+    </section>
+    <script src="assets/gallery.js"></script>
+</body>
+</html>

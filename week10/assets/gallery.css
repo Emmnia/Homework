@@ -1,0 +1,40 @@
+.gallery {
+    margin: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery__image {
+    max-width: 20vw;
+}
+
+.gallery__arrow {
+    margin: 5%;
+    align-self: center;
+    font-size: 40px;
+    color: rgb(92, 92, 92);
+    cursor: pointer;
+}
+
+.gallery__arrow:hover {
+    transform: scale(1.2);
+}
+
+.gallery__arrow:active {
+    color: black;
+}
+
+.price {
+    text-align: center;
+}
+
+.price__button {
+    color: white;
+    background-color: rgb(92, 92, 92);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.price__button:active {
+    background-color: black;
+}
