@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="assets/shoppingcart.css">
+</head>
+<body>
+    <main>
+        <h1>Корзина</h1>
+        <div class="cart">
+            <div class="item">
+                <div class="item__card">
+                    <img src="assets/jacket-ostin.jpg" alt="jacket">
+                    <div class="item__details">
+                        <h2>Куртка джинсовая O'stin</h2>
+                        <p>44 RUS (S INT)</p>
+                        <p>Голубой</p>
+                        <p>1</p>
+                </div>
+                </div>
+                <p><span id="price1">5059</span> ₽</p>
+            </div>
+            <div class="item">
+                <div class="item__card">
+                    <img src="assets/jeans-tvoe.jpg" alt="jeans">
+                    <div class="item__details">
+                        <h2>Джинсы Твое</h2>
+                        <p>52 RUS (XXL INT)</p>
+                        <p>Голубой</p>
+                        <p>1</p>
+                    </div>
+                </div>
+                <p><span id="price2">3002</span> ₽</p>
+            </div>
+            <div class="item">
+                <div class="item__card">
+                    <img src="assets/tshirt.jpeg" alt="tshirt">
+                    <div class="item__details">
+                        <h2>Футболка Barmariska</h2>
+                        <p>40/42 RUS</p>
+                        <p>Бежевый</p>
+                        <p>1</p>
+                    </div>
+                </div>
+                <p><span id="price3">1490</span> ₽</p>
+            </div>
+            <div class="item">
+                <div class="item__card">
+                    <img src="assets/sneakers.jpg" alt="sneakers">
+                    <div class="item__details">
+                        <h2>Кроссовки O2 Live</h2>
+                        <p>38 RUS</p>
+                        <p>Бежевый</p>
+                        <p>1</p>
+                    </div>
+                </div>
+                <p><span id="price4">3570</span> ₽</p>
+            </div>
+        </div>
+        <div class="total">
+            <button id="discount" type="button">Использовать купон на 20%</button>
+            <div>
+                <h2>Итого:</h2>
+                <p id="result"></p>
+            </div>
+        </div>
+    </main>
+    <script src="assets/shoppingcart.js"></script>
+</body>
+</html>
