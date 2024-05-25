@@ -13,10 +13,10 @@ function applyDiscount() {
     let newPrice3 = parseFloat(price3.innerHTML)*0.8;
     let newPrice4 = parseFloat(price4.innerHTML)*0.8;
     let discountPrice = newPrice1 + newPrice2 + newPrice3 + newPrice4;
-    price1.textContent = newPrice1;
-    price2.textContent = newPrice2;
-    price3.textContent = newPrice3;
-    price4.textContent = newPrice4;
+    price1.textContent = newPrice1.toFixed(1);
+    price2.textContent = newPrice2.toFixed(1);
+    price3.textContent = newPrice3.toFixed(1);
+    price4.textContent = newPrice4.toFixed(1);
     result.textContent = discountPrice.toFixed(1) + '₽';
     button.disabled = true;
 }
