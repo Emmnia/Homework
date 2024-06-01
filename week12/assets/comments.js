@@ -30,6 +30,7 @@ function submitComment() {
     if (userpicURL.value.length === 0) {
         userpic.src = 'https://static.thenounproject.com/png/801398-200.png';
     }
+    userpic.alt = 'userpic';
     user.append(userpic);
     const username = document.createElement('span');
     user.append(username);
