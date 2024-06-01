@@ -27,6 +27,9 @@ function submitComment() {
     newComment.append(user);
     const userpic = document.createElement('img');
     userpic.src = userpicURL.value;
+    if (userpicURL.value.length === 0) {
+        userpic.src = 'https://static.thenounproject.com/png/801398-200.png';
+    }
     user.append(userpic);
     const username = document.createElement('span');
     user.append(username);
