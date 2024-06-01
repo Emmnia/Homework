@@ -53,7 +53,9 @@ function submitComment() {
     submitButton.disabled = true;
 }
 
-submitButton.addEventListener('click', checkSpam);
 nameInput.addEventListener('keyup', checkFields);
 commentInput.addEventListener('keyup', checkFields);
-submitButton.addEventListener('click', submitComment);
+submitButton.addEventListener('click', function() {
+    checkSpam();
+    submitComment();
+});
