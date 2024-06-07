@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/comments.css">
+</head>
+<body>
+    <form action="">
+        <h2>Оставьте ваш комментарий</h2>
+        <div>
+            <span>Показывать ваше имя?</span>
+            <label for="yes">Да</label>
+            <input type="checkbox" id="yes">
+            <label for="no">Нет</label>
+            <input type="checkbox" id="no">
+        </div>
+        <label for="username-input">Введите ваше имя:</label>
+        <input id="username-input" type="text" required>
+        <label for="userpic-url">Вставьте ссылку на ваш аватар:</label>
+        <input id="userpic-url" type="url">
+        <label for="comment-input">Оставьте комментарий:</label>
+        <textarea id="comment-input" required></textarea>
+        <button id="submit" type="button">Отправить</button>
+    </form>
+    <div id="chat">
+        <h2>Чат</h2>
+        <!-- <div class="comment">
+            <div class="user">
+                <img></img>
+                <span></span>
+                <span></span>
+            </div>
+            <p></p>
+        </div>    -->
+    </div>
+    <script src="assets/comments.js"></script>
+</body>
+</html>

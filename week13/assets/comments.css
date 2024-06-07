@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Montserrat';
+    src:url(/assets/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+    padding: 2rem;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(/assets/godzilla-nebula.jpg);
+    background-size: cover;
+}
+
+form {
+    margin-right: 5%;
+    padding: 1rem;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(125, 224, 248, 0.7);
+    border-radius: 10px;
+}
+
+input {
+    margin-bottom: 2rem;
+    max-width: 30vw;
+    border-radius: 5px;
+    border: none;
+}
+
+textarea {
+    margin-bottom: 2rem;
+    max-width: 30vw;
+    border-radius: 5px;
+    border: none;
+}
+
+#submit {
+    margin: auto;
+    padding: 0.5rem;
+    max-width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#submit:active {
+    background-color: rgb(125, 224, 248);
+}
+
+#chat {
+    padding: 1rem;
+    width: 60vw;
+    max-height: 100vh;
+    background-color: rgb(125, 224, 248, 0.7);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.userpic {
+    margin-right: 0.5rem;
+    max-width: 50px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.date {
+    margin-left: auto;
+}
+
+.comment {
+    margin-bottom: 1rem;
+    max-width: 60vw;
+    border-bottom: 1px dotted blue;
+}
