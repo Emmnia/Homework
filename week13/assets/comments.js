@@ -5,8 +5,21 @@ const userpicURL = document.getElementById('userpic-url');
 const commentInput = document.getElementById('comment-input');
 const submitButton = document.getElementById('submit');
 const chat = document.getElementById('chat');
+const checkboxes = document.querySelectorAll('.checkbox');
 
 submitButton.disabled = true;
+
+checkboxes.forEach(element => {
+    element.addEventListener('change', function(){
+        if (this.checked) {
+            checkboxes.forEach(el => {
+                if (el !== this) {
+                    el.checked = false;
+                }
+            })
+        }
+    });
+});
 
 function checkSpam(str) {
     let lowStr = str.toLowerCase();
@@ -84,6 +97,7 @@ function submitComment() {
     nameInput.value = '';
     userpicURL.value = '';
     commentInput.value = '';
+    noCheckbox.checked = false;
     submitButton.disabled = true;
 }
 
