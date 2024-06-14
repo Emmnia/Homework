@@ -13,13 +13,13 @@ console.log("Количество положительных оценок: " + f
 const filteredLowGrades = grades.filter(el=>el < 60);
 console.log("Количество отрицательных оценок: " + filteredLowGrades.length);
 grades.forEach(function(grade) {
-    if (grade > 80 && grade < 100) {
+    if (grade >= 80 && grade < 100) {
         console.log("A");
-    } else if (grade > 60 && grade < 79) {
+    } else if (grade >= 60 && grade < 79) {
         console.log("B");
-    } else if (grade > 40 && grade < 59) {
+    } else if (grade >= 40 && grade < 59) {
         console.log("C");
-    } else if (grade > 20 && grade < 39) {
+    } else if (grade >= 20 && grade < 39) {
         console.log("D");
     } else {
         console.log("E");
