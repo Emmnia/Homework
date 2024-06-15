@@ -2,18 +2,30 @@ const grades = [...Array(12)].map(function() {
     return Math.floor(Math.random()*100 + 1); 
 }); 
 console.log('Баллы студентов: ' + grades);
+const gradesResult = document.getElementById('student-grades');
+gradesResult.textContent = `Баллы студентов: ${grades.join(', ')}`;
 const average = grades.reduce(function (a, b) {
     return (a + b);
 }) / grades.length;
 console.log("Средний балл: " + average.toFixed(2));
+const averageGrade = document.getElementById('average-grade');
+averageGrade.textContent = `Средний балл: ${average.toFixed(2)}`;
 let sortedGrades = [...grades];
 sortedGrades.sort((a, b) => a -b);
 console.log("Максимальный балл: " + sortedGrades[sortedGrades.length -1]);
+const maxGrade = document.getElementById('max');
+maxGrade.textContent = `Максимальный балл: ${sortedGrades[sortedGrades.length -1]}`;
 console.log("Минимальный балл: " + sortedGrades[0]);
+const minGrade = document.getElementById('min');
+minGrade.textContent = `Минимальный балл: ${sortedGrades[0]}`;
 const filteredGrades = grades.filter(el => el >= 60);
 console.log("Количество положительных оценок: " + filteredGrades.length);
+const positive = document.getElementById('positive');
+positive.textContent = `Количество положительных оценок: ${filteredGrades.length}`;
 const filteredLowGrades = grades.filter(el => el < 60);
 console.log("Количество отрицательных оценок: " + filteredLowGrades.length);
+const negative = document.getElementById('negative');
+negative.textContent = `Количество отрицательных оценок: ${filteredLowGrades.length}`;
 let gradesAsLetters = grades.map((grade) => {
     if (grade >= 80) {
         return "A";
@@ -28,7 +40,8 @@ let gradesAsLetters = grades.map((grade) => {
     }
 });
 console.log(gradesAsLetters);
-
+let letters = document.getElementById('letters');
+letters.textContent = `Оценки буквами: ${gradesAsLetters.join(', ')}`;
 
 
 
