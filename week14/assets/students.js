@@ -4,27 +4,30 @@ const grades = [...Array(12)].map(function() {
 console.log('Баллы студентов: ' + grades);
 const average = grades.reduce(function (a, b) {
     return (a + b);
-}) / 12;
+}) / grades.length;
 console.log("Средний балл: " + average.toFixed(2));
-console.log("Максимальный балл: " + Math.max.apply(null, grades));
-console.log("Минимальный балл: " + Math.min.apply(null, grades));
-const filteredGrades = grades.filter(el=>el >= 60);
+let sortedGrades = [...grades];
+sortedGrades.sort((a, b) => a -b);
+console.log("Максимальный балл: " + sortedGrades[sortedGrades.length -1]);
+console.log("Минимальный балл: " + sortedGrades[0]);
+const filteredGrades = grades.filter(el => el >= 60);
 console.log("Количество положительных оценок: " + filteredGrades.length);
-const filteredLowGrades = grades.filter(el=>el < 60);
+const filteredLowGrades = grades.filter(el => el < 60);
 console.log("Количество отрицательных оценок: " + filteredLowGrades.length);
-grades.forEach(function(grade) {
-    if (grade >= 80 && grade < 100) {
-        console.log("A");
-    } else if (grade >= 60 && grade < 79) {
-        console.log("B");
-    } else if (grade >= 40 && grade < 59) {
-        console.log("C");
-    } else if (grade >= 20 && grade < 39) {
-        console.log("D");
+let gradesAsLetters = grades.map((grade) => {
+    if (grade >= 80) {
+        return "A";
+    } else if (grade >= 60) {
+        return "B";
+    } else if (grade >= 40) {
+        return "C";
+    } else if (grade >= 20) {
+        return "D";
     } else {
-        console.log("E");
+        return "E";
     }
 });
+console.log(gradesAsLetters);
 
 
 
