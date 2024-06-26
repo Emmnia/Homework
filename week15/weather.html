@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="assets/weather.css">
+</head>
+<body>
+    <h1>Температура в разных городах</h1>
+    <div class="widget">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/55d7637d62/moscow/" data-label_1="MOSCOW" data-mode="Current"
+            data-days="3" data-theme="original">MOSCOW</a>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/60d0830d12/saint-petersburg/" data-label_1="SANKT-PETERBURG"
+            data-mode="Current" data-days="3" data-theme="original">SANKT-PETERBURG</a>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/" data-label_1="NEW YORK"
+            data-mode="Current" data-days="3" data-theme="original">NEW YORK</a>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/35d69139d69/tokyo/" data-label_1="TOKYO" data-mode="Current"
+            data-days="3" data-theme="original">TOKYO</a>
+    </div>
+    <div class="button">
+        <button type="button" id="submit">Внести данные</button>
+    </div>
+    <div id="calculations">
+
+    </div>
+    <script src="assets/weather.js"></script>
+</body>
+</html>

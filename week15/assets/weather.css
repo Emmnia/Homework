@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/assets/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+    padding: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.widget {
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.weatherwidget-io {
+    width: 25%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+#submit {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
