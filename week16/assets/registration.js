@@ -33,9 +33,9 @@ ageInput.addEventListener('change', () => {
 
 const radio = form.querySelectorAll('input[type="radio"]');
 let isChecked = false;
-radio.forEach(function (element) {
+radio.forEach(element => {
     if (element.checked) {
-        isChecked = true;
+        return isChecked = true;
     }
 })
 const errorSex = document.getElementById('error-sex');
@@ -84,11 +84,15 @@ const validateInput = (input) => {
 
 form.addEventListener('submit', function(evt) {
         evt.preventDefault();
-        // inputsToCheck.forEach((input) => {
-        //     if (validateInput(input)) {
-        //     submitButton.disabled = false;
-        //     }
-        // })
+        let flag = true;
+        inputsToCheck.forEach(input => {
+            if (!validateInput(input)) {
+            return flag = false;
+            }
+        })
+        if (!flag) {
+            submitButton.disabled = false;
+        }
         
         form.reset();
 })
