@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/cars.css">
+</head>
+<body>
+    <div class="fill"></div>
+    <div class="container">
+        <form class="form form1" name="form1">
+            <div class="form__item">
+                <h2 class="heading">Выберите марку</h2>
+                <select name="brand" id="brand">
+                    <option value="renault">Renault</option>
+                    <option value="opel">Opel</option>
+                    <option value="mazda">Mazda</option>
+                    <option value="jaguar">Jaguar</option>
+                </select>
+            </div>
+            <div class="form__item">
+                <h2 class="heading">Выберите модель</h2>
+                <select name="make" id="make">
+                </select>
+            </div>
+            <div class="form__item">
+                <h2 class="heading">Выберите тип топлива</h2>
+                <ul class="switcher">
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="economy" class="tariff" value="economy" checked="checked"/>
+                        <label for="economy">Бензин</label>
+                    </li>
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="comfort" class="tariff" value="comfort" />
+                        <label for="comfort">Дизель</label>
+                    </li>
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="business" class="tariff" value="business" />
+                        <label for="business">Газ</label>
+                    </li>
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="premium" class="tariff" value="premium" />
+                        <label for="premium">Электричество</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="form__item">
+                <h2 class="heading">Введите объем двигателя (л)</h2>
+                <div class="slider">
+                    <input  type="range" name="time"  id="time"  step="0.1"   min="1.1"  max="3.5" value="2"/>
+                    <output id="volume" for="time">2</output>
+                </div>
+            </div>
+            <div class="form__item">
+                <h2 class="heading">Пробег</h2>
+                <ul class="switcher">
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="economy" class="tariff" value="economy" checked="checked" />
+                        <label for="economy">Новый</label>
+                    </li>
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="comfort" class="tariff" value="comfort" />
+                        <label for="comfort">Подержанный</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="form__item">
+                <!-- <h2 class="heading">Количество владельцев</h2>
+                <ul class="switcher">
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="economy" class="tariff" value="economy" checked="checked" />
+                        <label for="economy">1-2</label>
+                    </li>
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="comfort" class="tariff" value="comfort" />
+                        <label for="comfort">3 и больше</label>
+                    </li>
+                </ul> -->
+            </div>
+            <div class="form__item">
+                <h2 class="heading">Способ оплаты</h2>
+                <ul class="switcher">
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="economy" class="tariff" value="economy" checked="checked" />
+                        <label for="economy">Картой</label>
+                    </li>
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="comfort" class="tariff" value="comfort" />
+                        <label for="comfort">Наличными</label>
+                    </li>
+                    <li class="switcher__item">
+                        <input type="radio" name="tariff" id="business" class="tariff" value="business" />
+                        <label for="business">Счет на юридическое лицо</label>
+                    </li>
+                </ul>
+            </div>
+        </form>
+        <form action="#" class="form form2" name="form2">
+            <div class="form__item">
+                <h2 class="heading">Ваш выбор</h2>
+                <div class="order">
+                    <span>Марка:</span>
+                    <output id="order_option">—</output>
+                </div>
+                <div class="order">
+                    <span>Модель:</span>
+                    <output id="order_option">—</output>
+                </div>
+                <div class="order">
+                    <span>Тип топлива:</span>
+                    <output id="order_tariff">—</output>
+                </div>
+                <div class="order">
+                    <span>Объем двигателя:</span>
+                    <output id="order_time">—</output>
+                </div>
+                <div class="order">
+                    <span>Пробег:</span>
+                    <output id="order_option">—</output>
+                </div>
+                <div class="order">
+                    <span>Способ оплаты:</span>
+                    <output id="order_option">—</output>
+                </div>
+            </div>
+            <div class="form__item">
+                <h2 class="heading">Итоговая стоимость автомобиля</h2>
+                <output class="total" id="total">0</output>
+            </div>
+        </form>
+    </div>
+    <script src="assets/cars.js"></script>
+</body>
+</html>
