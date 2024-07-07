@@ -7,10 +7,6 @@ const ageInput = form.elements.age;
 const occupationSelect = form.elements.occupation;
 const pwdInput = form.elements.password;
 const checkbox = document.getElementById('checkbox');
-const inputsToCheck = form.querySelectorAll('input[type="text"], input[type="email"], input[type="password"]')
-console.log(inputsToCheck)
-
-submitButton.disabled = true;
 
 nameInput.addEventListener('change', () => {
     const nameError = document.getElementById('error-name');
@@ -78,21 +74,15 @@ inputFields.forEach(function(input) {
     });
 })
 
-const validateInput = (input) => {
-    return !!input.value;
-}
-
 form.addEventListener('submit', function(evt) {
         evt.preventDefault();
-        let flag = true;
-        inputsToCheck.forEach(input => {
-            if (!validateInput(input)) {
-            flag = false;
-            }
-        })
-        if (!flag) {
-            submitButton.disabled = false;
-        }
+        const formData = new FormData(evt.target);
+        console.log("Имя: " + formData.get('name'));
+        console.log("Почта: " + formData.get('email'));
+        console.log("Возраст: " + formData.get('age'));
+        console.log("Пол: " + formData.get('sex.value'));
+        console.log("Профессия: " + formData.get('occupation'));
+        console.log("Пароль: " + formData.get('password'));
         form.reset();
 })
 
