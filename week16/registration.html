@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/registration.css">
+</head>
+<body>
+    <form name="registration">
+        <input class="input-field" type="text" name="name" placeholder="Ваше имя (2-20 знаков)" minlength="2" maxlength="20" pattern="[a-zA-Z\s]*" required>
+        <span class="error" id="error-name"></span>
+        <input class="input-field" type="email" name="email" placeholder="Электронная почта" required>
+        <span class="error" id="error-email"></span>
+        <input class="input-field" type="text" name="age" placeholder="Ваш возраст" pattern="^[0-9]+$" minlength="1" maxlength="3" required>
+        <span class="error" id="error-age"></span>
+        <div>
+            <label for="male">Мужчина</label>
+            <input class="input-field" type="radio" name="sex" id="male" required>
+            <label for="female">Женщина</label>
+            <input class="input-field" type="radio" name="sex" id="female">
+            <span class="error" id="error-sex"></span>
+        </div>
+        <select class="input-field" name="occupation" id="" required>
+            <option hidden>Ваша профессия</option>
+            <option value="doctor">Врач</option>
+            <option value="it">Программист</option>
+            <option value="teacher">Учитель</option>
+            <option value="designer">Дизайнер</option>
+            <option value="engineer">Инженер</option>
+            <option value="sales">Продавец</option>
+            <option value="other">Другое</option>
+        </select>
+        <span class="error" id="error-occupation"></span>
+        <input class="input-field" type="password" name="password" placeholder="Придумайте пароль" minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$" required>
+        <span class="error" id="error-password"></span>
+        <div>
+            <input class="input-field"  type="checkbox" name="accept" id="checkbox" required>
+            <label for="accept">Согласие с обработкой данных</label>    
+        </div>
+        <span class="error" id="error-accept"></span>
+        <button type="submit" id="submit">Зарегистрироваться</button>
+    </form>
+    <script src="assets/registration.js"></script>
+</body>
+</html>
+
+
+
