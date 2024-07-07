@@ -35,7 +35,7 @@ const radio = form.querySelectorAll('input[type="radio"]');
 let isChecked = false;
 radio.forEach(element => {
     if (element.checked) {
-        return isChecked = true;
+        isChecked = true;
     }
 })
 const errorSex = document.getElementById('error-sex');
@@ -87,13 +87,12 @@ form.addEventListener('submit', function(evt) {
         let flag = true;
         inputsToCheck.forEach(input => {
             if (!validateInput(input)) {
-            return flag = false;
+            flag = false;
             }
         })
         if (!flag) {
             submitButton.disabled = false;
         }
-        
         form.reset();
 })
 
