@@ -13,10 +13,10 @@
             <div class="form__item">
                 <h2 class="heading">Выберите марку</h2>
                 <select name="brand" id="brand">
-                    <option value="renault">Renault</option>
-                    <option value="opel">Opel</option>
-                    <option value="mazda">Mazda</option>
-                    <option value="jaguar">Jaguar</option>
+                    <option class="brand" value="Renault">Renault</option>
+                    <option class="brand" value="Opel">Opel</option>
+                    <option class="brand" value="Mazda">Mazda</option>
+                    <option class="brand" value="Jaguar">Jaguar</option>
                 </select>
             </div>
             <div class="form__item">
@@ -48,8 +48,8 @@
             <div class="form__item">
                 <h2 class="heading">Введите объем двигателя (л)</h2>
                 <div class="slider">
-                    <input  type="range" name="time"  id="time"  step="0.1"   min="1.1"  max="3.5" value="2"/>
-                    <output id="volume" for="time">2</output>
+                    <input  type="range" name="engine"  id="engine"  step="0.1"   min="1.1"  max="3.5" value="2"/>
+                    <output id="volume" for="engine">2</output>
                 </div>
             </div>
             <div class="form__item">
@@ -95,33 +95,36 @@
                     </li>
                 </ul>
             </div>
+            <div class="form__item">
+                <button type="reset">Сбросить</button>
+            </div>
         </form>
         <form action="#" class="form form2" name="form2">
             <div class="form__item">
                 <h2 class="heading">Ваш выбор</h2>
                 <div class="order">
                     <span>Марка:</span>
-                    <output id="order_option">—</output>
+                    <output id="order_brand">—</output>
                 </div>
                 <div class="order">
                     <span>Модель:</span>
-                    <output id="order_option">—</output>
+                    <output id="order_make">—</output>
                 </div>
                 <div class="order">
                     <span>Тип топлива:</span>
-                    <output id="order_tariff">—</output>
+                    <output id="order_fuel">—</output>
                 </div>
                 <div class="order">
                     <span>Объем двигателя:</span>
-                    <output id="order_time">—</output>
+                    <output id="order_engine">—</output>
                 </div>
                 <div class="order">
                     <span>Пробег:</span>
-                    <output id="order_option">—</output>
+                    <output id="order_age">—</output>
                 </div>
                 <div class="order">
                     <span>Способ оплаты:</span>
-                    <output id="order_option">—</output>
+                    <output id="order_payment">—</output>
                 </div>
             </div>
             <div class="form__item">
@@ -133,3 +136,15 @@
     <script src="assets/cars.js"></script>
 </body>
 </html>
+
+
+
+<!-- Выпадающий список (select) с маркой автомобиля: Reno, Opel, Mazda, Jaguar
+Выпадающий список (select) с моделью автомобиля, зависящей от выбранной марки
+Чекбокс или радиокнопка для выбора типа топлива: бензин, дизель, газ, электричество
+Поле ввода (input) для ввода объема двигателя (от 1.1 литра до 3.5 литров)
+Чекбокс или радиокнопка для выбора состояния автомобиля: новый, подержанный
+Если автомобиль подержанный, появляется чекбокс или радиокнопка для выбора количества владельцев: 1-2 владельца, более
+3-х владельцев
+Чекбокс или радиокнопка для выбора способа оплаты: картой, наличными, счет на юридическое лицо
+Дополнительные поля по вашему желанию -->
