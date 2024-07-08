@@ -39,15 +39,15 @@ makes.forEach((make) => {
   make.addEventListener("change", updatePrice);
 });
 
-makeChoice.addEventListener('click', () => {
+makeChoice.addEventListener('change', () => {
   orderUpdate();
 });
 
-fuelChoice.addEventListener('click', () => {
+fuelChoice.addEventListener('change', () => {
   orderUpdate();
 });
 
-engine.addEventListener("change", () => {
+engine.addEventListener("input", () => {
   engineUpdate();
 });
 
@@ -76,7 +76,7 @@ function makeUpdate(e) {
 function updatePrice() {
   let makePrice = currentSet.getMakePrice();
   let fuelPrice = currentSet.getFuelPrice();
-  let totalPrice = currentSet.engine * makePrice + fuelPrice;
+  let totalPrice = currentSet.engine * fuelPrice + makePrice;
   total.value = totalPrice;
 }
 
@@ -108,10 +108,10 @@ const priceInfo = {
     XF: 745000,
   },
   fuel: {
-    option1: 100000,
-    option2: 150000,
-    option3: 150000,
-    option4: 200000,
+    gasoline: 51.4,
+    diesel: 58.3,
+    gas: 22.49,
+    electro: 20,
   },
 };
 
