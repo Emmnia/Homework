@@ -1,15 +1,21 @@
 const brandChoice = document.forms.form1.elements.brand;
 const makeChoice = document.forms.form1.elements.make;
 const fuelChoice = document.forms.form1.elements.fuel;
+const ageChoice = document.forms.form1.elements.age;
+const ownersChoice = document.forms.form1.elements.owners;
+const owners = document.querySelector('.owners-container');
 const makes = Array.from(document.querySelectorAll(".make"));
 const fuel = Array.from(document.querySelectorAll(".fuel"));
 const engine = document.forms.form1.elements.engine;
-const volume = document.querySelector("#volume");
+const volume = document.forms.form1.elements.volume;
 const total = document.querySelector("#total");
 const orderBrand = document.querySelector("#order_brand");
 const orderMake = document.querySelector("#order_make");
 const orderEngine = document.querySelector("#order_engine");
 const orderFuel = document.querySelector("#order_fuel");
+const orderAge = document.querySelector("#order_age");
+
+owners.style.display = 'none';
 
 const makeList = () => {
   switch (brandChoice.value) {
@@ -39,17 +45,19 @@ makes.forEach((make) => {
   make.addEventListener("change", updatePrice);
 });
 
-makeChoice.addEventListener('change', () => {
-  orderUpdate();
-});
+makeChoice.addEventListener('change', orderUpdate);
 
-fuelChoice.addEventListener('change', () => {
-  orderUpdate();
-});
+fuelChoice.addEventListener('change', orderUpdate);
 
-engine.addEventListener("input", () => {
-  engineUpdate();
-});
+ageChoice.addEventListener('change', () => {
+  if (ageChoice.value === '3') {
+  owners.style.display = 'block';
+  }
+  orderUpdate();
+})
+
+
+engine.addEventListener('input', engineUpdate);
 
 fuel.forEach((el) => {
   el.addEventListener("click", fuelUpdate);
@@ -61,14 +69,14 @@ function fuelUpdate(e) {
   orderUpdate();
 }
 
-function engineUpdate(e) {
+function engineUpdate() {
   currentSet.engine = engine.value;
   volume.value = currentSet.engine;
   updatePrice();
   orderUpdate();
 }
 
-function makeUpdate(e) {
+function makeUpdate() {
   updatePrice();
   orderUpdate();
 }
@@ -84,8 +92,8 @@ function orderUpdate() {
   orderBrand.textContent = brandChoice.value;
   orderMake.textContent = makeChoice.value;
   orderFuel.textContent = fuelChoice.value;
-  orderEngine.textContent = currentSet.engine + " литра";
-  orderOption.textContent = currentSet.getOptionPrice() + " \u{20BD}";
+  orderEngine.textContent = engine.value + " литра";
+  orderAge.textContent = ageChoice.value;
 }
 
 const priceInfo = {
@@ -118,7 +126,7 @@ const priceInfo = {
 let currentSet = {
   make: "CX30",
   engine: 2,
-  fuel: [],
+  fuel: "gas",
   getMakePrice() {
     return priceInfo.make[this.make];
   },
