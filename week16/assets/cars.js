@@ -3,7 +3,7 @@ const makeChoice = document.forms.form1.elements.make;
 const fuelChoice = document.forms.form1.elements.fuel;
 const makes = Array.from(document.querySelectorAll(".make"));
 const fuel = Array.from(document.querySelectorAll(".fuel"));
-const engine = document.querySelector("#engine");
+const engine = document.forms.form1.elements.engine;
 const volume = document.querySelector("#volume");
 const total = document.querySelector("#total");
 const orderBrand = document.querySelector("#order_brand");
@@ -47,7 +47,7 @@ fuelChoice.addEventListener('click', () => {
   orderUpdate();
 });
 
-engine.addEventListener("click", () => {
+engine.addEventListener("change", () => {
   engineUpdate();
 });
 
@@ -75,8 +75,8 @@ function makeUpdate(e) {
 
 function updatePrice() {
   let makePrice = currentSet.getMakePrice();
-  let optionPrice = currentSet.getOptionPrice();
-  let totalPrice = currentSet.engine * makePrice + optionPrice;
+  let fuelPrice = currentSet.getFuelPrice();
+  let totalPrice = currentSet.engine * makePrice + fuelPrice;
   total.value = totalPrice;
 }
 
