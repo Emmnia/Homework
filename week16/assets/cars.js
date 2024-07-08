@@ -1,5 +1,15 @@
 const brandChoice = document.forms.form1.elements.brand;
 const makeChoice = document.forms.form1.elements.make;
+const fuelChoice = document.forms.form1.elements.fuel;
+const makes = Array.from(document.querySelectorAll(".make"));
+const fuel = Array.from(document.querySelectorAll(".fuel"));
+const engine = document.querySelector("#engine");
+const volume = document.querySelector("#volume");
+const total = document.querySelector("#total");
+const orderBrand = document.querySelector("#order_brand");
+const orderMake = document.querySelector("#order_make");
+const orderEngine = document.querySelector("#order_engine");
+const orderFuel = document.querySelector("#order_fuel");
 
 const makeList = () => {
   switch (brandChoice.value) {
@@ -20,36 +30,33 @@ const makeList = () => {
   }
 }
 
-brandChoice.addEventListener('click', makeList);
-
-
-
-
-
-
-const brands = Array.from(document.querySelectorAll(".brand"));
-
-const make = Array.from(document.querySelectorAll(".make"));
-const engine = document.querySelector("#engine");
-const volume = document.querySelector("#volume");
-const total = document.querySelector("#total");
-
-const orderBrand = document.querySelector("#order_brand");
-const orderTime = document.querySelector("#order_time");
-const orderOption = document.querySelector("#order_option");
-
-brands.forEach((brand) => {
-  brand.addEventListener("click", brandUpdate);
+brandChoice.addEventListener('click', () => {
+  makeList();
+  orderUpdate();
 });
 
-engine.addEventListener("input", engineUpdate);
-
-option.forEach((el) => {
-  el.addEventListener("change", optionUpdate);
+makes.forEach((make) => {
+  make.addEventListener("change", updatePrice);
 });
 
-function brandUpdate(e) {
-  currentSet.brand = e.target.id;
+makeChoice.addEventListener('click', () => {
+  orderUpdate();
+});
+
+fuelChoice.addEventListener('click', () => {
+  orderUpdate();
+});
+
+engine.addEventListener("click", () => {
+  engineUpdate();
+});
+
+fuel.forEach((el) => {
+  el.addEventListener("click", fuelUpdate);
+});
+
+function fuelUpdate(e) {
+  currentSet.fuel = e.target.id;
   updatePrice();
   orderUpdate();
 }
@@ -61,29 +68,24 @@ function engineUpdate(e) {
   orderUpdate();
 }
 
-function optionUpdate(e) {
-  e.stopPropagation();
-  if (e.target.checked) {
-    currentSet.option.push(e.target.id);
-  } else {
-    let index = currentSet.option.indexOf(e.target.id);
-    currentSet.option.splice(index, 1);
-  }
+function makeUpdate(e) {
   updatePrice();
   orderUpdate();
 }
 
 function updatePrice() {
-  let brandPrice = currentSet.getBrandPrice();
+  let makePrice = currentSet.getMakePrice();
   let optionPrice = currentSet.getOptionPrice();
-  let totalPrice = currentSet.engine * brandPrice + optionPrice;
+  let totalPrice = currentSet.engine * makePrice + optionPrice;
   total.value = totalPrice;
 }
 
 function orderUpdate() {
-  orderTime.value = currentSet.engine + " литра";
-  orderBrand.value = brandChoice.value;
-  orderOption.value = currentSet.getOptionPrice() + " \u{20BD}";
+  orderBrand.textContent = brandChoice.value;
+  orderMake.textContent = makeChoice.value;
+  orderFuel.textContent = fuelChoice.value;
+  orderEngine.textContent = currentSet.engine + " литра";
+  orderOption.textContent = currentSet.getOptionPrice() + " \u{20BD}";
 }
 
 const priceInfo = {
@@ -105,29 +107,23 @@ const priceInfo = {
     fpace: 2050000,
     XF: 745000,
   },
-  option: {
-    option1: 1000,
-    option2: 1500,
-    option3: 1500,
-    option4: 2000,
+  fuel: {
+    option1: 100000,
+    option2: 150000,
+    option3: 150000,
+    option4: 200000,
   },
 };
 
 let currentSet = {
-  brand: "renault",
+  make: "CX30",
   engine: 2,
-  option: [],
-  getBrandPrice() {
-    return priceInfo.brand[this.brand];
+  fuel: [],
+  getMakePrice() {
+    return priceInfo.make[this.make];
   },
-  getOptionPrice() {
-    let optionPrice = 0;
-    if (!this.option.length == 0) {
-      this.option.forEach((el) => {
-        optionPrice += priceInfo.option[el];
-      });
-    }
-    return optionPrice;
+  getFuelPrice() {
+    return priceInfo.fuel[this.fuel];
   },
 };
 
