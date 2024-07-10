@@ -139,10 +139,10 @@ let currentSet = {
   engine: 2,
   fuel: "gas",
   getMakePrice() {
-    return priceInfo.make;
+    return priceInfo.make[this.make];
   },
   getFuelPrice() {
-    return priceInfo.fuel;
+    return priceInfo.fuel[this.fuel];
   },
 };
 
