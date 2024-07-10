@@ -28,18 +28,7 @@ ageInput.addEventListener('change', () => {
 })
 
 const radio = form.querySelectorAll('input[type="radio"]');
-let isChecked = false;
-radio.forEach(element => {
-    if (element.checked) {
-        isChecked = true;
-    }
-})
 const errorSex = document.getElementById('error-sex');
-    if (!isChecked) {
-        errorSex.textContent = 'Укажите ваш пол';
-    } else {
-        errorSex.textContent = '';
-    }
 
 occupationSelect.addEventListener('change', () => {
     if (!occupationSelect.value) {
@@ -76,6 +65,17 @@ inputFields.forEach(function(input) {
 
 form.addEventListener('submit', function(evt) {
         evt.preventDefault();
+        let isChecked = false;
+    radio.forEach(element => {
+    if (element.checked) {
+        isChecked = true;
+    }
+    if (!isChecked) {
+        errorSex.textContent = 'Укажите ваш пол';
+    } else {
+        errorSex.textContent = '';
+    }
+    })
         const formData = new FormData(evt.target);
         console.log("Имя: " + formData.get('name'));
         console.log("Почта: " + formData.get('email'));
