@@ -3,17 +3,19 @@ const makeChoice = document.forms.form1.elements.make;
 const fuelChoice = document.forms.form1.elements.fuel;
 const ageChoice = document.forms.form1.elements.age;
 const ownersChoice = document.forms.form1.elements.owners;
+const paymentChoice = document.forms.form1.elements.payment;
 const owners = document.querySelector('.owners-container');
 const makes = Array.from(document.querySelectorAll(".make"));
 const fuel = Array.from(document.querySelectorAll(".fuel"));
 const engine = document.forms.form1.elements.engine;
-const volume = document.forms.form1.elements.volume;
+const volume = document.querySelector("#volume");;
 const total = document.querySelector("#total");
 const orderBrand = document.querySelector("#order_brand");
 const orderMake = document.querySelector("#order_make");
 const orderEngine = document.querySelector("#order_engine");
 const orderFuel = document.querySelector("#order_fuel");
 const orderAge = document.querySelector("#order_age");
+const orderPayment = document.querySelector("#order_payment");
 
 owners.style.display = 'none';
 
@@ -56,6 +58,7 @@ ageChoice.addEventListener('change', () => {
   orderUpdate();
 })
 
+paymentChoice.addEventListener('change', orderUpdate);
 
 engine.addEventListener('input', engineUpdate);
 
@@ -84,7 +87,14 @@ function makeUpdate() {
 function updatePrice() {
   let makePrice = currentSet.getMakePrice();
   let fuelPrice = currentSet.getFuelPrice();
-  let totalPrice = currentSet.engine * fuelPrice + makePrice;
+  let totalPrice
+  if (paymentChoice.value === 'cash') {
+    totalPrice = currentSet.engine * fuelPrice + makePrice;
+  } else if (paymentChoice.value === 'card') {
+    totalPrice = (currentSet.engine * fuelPrice + makePrice) * 0.9;
+  } else {
+    totalPrice = currentSet.engine * fuelPrice + makePrice + (currentSet.engine * fuelPrice + makePrice) * 0.03;
+  }
   total.value = totalPrice;
 }
 
@@ -94,6 +104,7 @@ function orderUpdate() {
   orderFuel.textContent = fuelChoice.value;
   orderEngine.textContent = engine.value + " литра";
   orderAge.textContent = ageChoice.value;
+  orderPayment.textContent = paymentChoice.value;
 }
 
 const priceInfo = {
@@ -128,10 +139,10 @@ let currentSet = {
   engine: 2,
   fuel: "gas",
   getMakePrice() {
-    return priceInfo.make[this.make];
+    return priceInfo.make;
   },
   getFuelPrice() {
-    return priceInfo.fuel[this.fuel];
+    return priceInfo.fuel;
   },
 };
 
