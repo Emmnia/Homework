@@ -84,6 +84,10 @@ class Transport {
                     vehicleInfo.textContent = `${harley2.getPrice()}
                     Максимальная скорость: ${harley2.getMaxSpeed()}`;
                     break;
+                default:
+                    vehicleCard.appendChild(vehicleInfo);
+                    vehicleInfo.textContent = '-';
+                    break;
             }
         })
     }
