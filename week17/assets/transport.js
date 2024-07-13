@@ -121,7 +121,7 @@ class Bike extends Transport {
         this.maxSpeed = maxSpeed;
     }
     getMaxSpeed() {
-        return this.maxSpeed;
+        return this.maxSpeed + " км/ч";
     }
 }
 
