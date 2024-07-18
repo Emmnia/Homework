@@ -80,7 +80,7 @@ form.addEventListener('submit', function(evt) {
         console.log("Имя: " + formData.get('name'));
         console.log("Почта: " + formData.get('email'));
         console.log("Возраст: " + formData.get('age'));
-        console.log("Пол: " + formData.get('sex.value'));
+        console.log("Пол: " + formData.get('sex'));
         console.log("Профессия: " + formData.get('occupation'));
         console.log("Пароль: " + formData.get('password'));
         form.reset();
