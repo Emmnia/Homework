@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Blambot';
+    src: url(../assets/v_BlambotCasual_v1.0.ttf);
+}
+
+body {
+    font-family: 'Blambot';
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 1rem;
+    padding: 1rem;
+    width: 40%;
+    border: 3px double black;
+    border-radius: 20px;
+    position: relative;
+}
+
+.heading {
+    text-align: center;
+    
+}
+
+.click {
+    position: absolute;
+    top: 1rem;
+    right: -1rem;
+    background-image: url(../assets/burst-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: unset;
+    height: 70px;
+    width: 200px;
+    border: none;
+    font-family: 'Blambot';
+    cursor: pointer;
+}
+
+.click:hover {
+    transform: scale(1.2);
+}
+
+.click:active {
+    transform: perspective(23rem);
+}
+
+.popuptext {
+    display: none;
+    padding: 1rem;
+    width: 90%;
+    position: absolute;
+    z-index: 1;
+    top: 7rem;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 20px;
+}
+
+.show {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.info {
+    max-width: 100%;
+    text-align: center;
+}
+
+.image-container {
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.star-rating {
+    margin-top: 1rem;
+    text-align: center;
+    user-select: none;
+}
+
+.star {
+    font-size: 2rem;
+    color: rgb(255, 212, 59);
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
