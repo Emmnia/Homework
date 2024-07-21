@@ -103,8 +103,22 @@ let heroesJson = `[
 
 const heroes = JSON.parse(heroesJson);
 const container = document.getElementById('container');
+let ratings = [];
+let heroRating;
+
+let savedRatings = [];
+
+if(localStorage.getItem('ratings')) {
+  savedRatings = JSON.parse(localStorage.getItem('ratings'));
+  console.log(savedRatings);
+}
 
 heroes.forEach((hero) => {
+    heroRating = {
+      id: hero.url,
+      rating: 0
+    };
+    ratings.push(heroRating);
     let heroCard = document.createElement('div');
     heroCard.classList.add('card')
     container.append(heroCard);
@@ -143,44 +157,40 @@ heroes.forEach((hero) => {
             }
         })
     }
-    let ratings = [];
-    let heroRating = {
-        id: hero.url,
-        rating: 0
-    }
-
-    const cards = document.querySelectorAll('.card');
-    for (let card of cards) {
-        const allStars = card.querySelectorAll('.star');
-        allStars.forEach((star, i) => {
-            star.addEventListener('click', () => {
-                let currentStarLevel = i + 1;
-                allStars.forEach((star, j) => {
-                    if (currentStarLevel >= j + 1) {
-                        star.innerHTML = '&#9733';
-                        star.classList.add('full');
-                    } else {
-                        star.innerHTML = '&#9734';
-                        star.classList.remove('full');
-                    }
-                })
-            })
-        })
-    }
 })
+const cards = document.querySelectorAll('.card');
 
-
-
-
-// let parent = star.closest('.star-rating')
-//                 if (event.target.dataset.url === heroRating.id && event.target.dataset.url === parent.dataset.url) {
-//                     heroRating.rating = currentStarLevel;
-//                                         ratings.push(heroRating);
-//             console.log(ratings);
-//                 }
-
-
-
-
-
-
+for (let card of cards) {
+  const allStars = card.querySelectorAll('.star');
+  if(savedRatings) {
+    allStars.forEach((star, i) => {
+      const parent = star.closest('.star-rating');
+      const item = savedRatings.find((item) => item.id === parent.dataset.url)
+      if (item.rating >= i + 1) {
+        star.innerHTML = '&#9733';
+      } else {
+        star.innerHTML = '&#9734';
+      }
+    })
+  }
+  
+  allStars.forEach((star, i) => {
+    star.addEventListener('click', (event) => {
+      currentStarLevel = i + 1;
+      ratings.forEach((item) => {
+        if (event.target.dataset.url === item.id) {
+        item.rating = currentStarLevel;
+        }
+      })
+      console.log(ratings);
+      localStorage.setItem('ratings', JSON.stringify(ratings));
+      allStars.forEach((star, j) => {
+        if (currentStarLevel >= j + 1) {
+          star.innerHTML = '&#9733';
+        } else {
+          star.innerHTML = '&#9734';
+        }           
+      })
+    })
+  })
+}
