@@ -1,28 +1,23 @@
-const container = document.getElementById('post-container');
-const headingInput = document.getElementById('headingInput');
-const textInput = document.getElementById('textInput');
-const addButton = document.getElementById('addButton');
-
-const createPost = () => {
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({
-        title: headingInput.value,
-        body: textInput.value,
-    }),
-    headers: {
-        "Content-type": "application/json; charset=UTF-8"
-    }
-    })
+const renderPosts = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
-    .then((post) => {
-        const postContainer = document.createElement('div');
-        postContainer.innerHTML = `<h2>${post.title}</h2>
-        <p>${post.body}</p>`;
-        container.append(postContainer);
-    })
-    headingInput.value = '';
-    textInput.value = '';
+    .then((posts) => {
+        JSON.stringify(posts);
+        let newPost = {
+        title: 'Заголовок',
+        content: 'Статья',
+        };
+        posts.forEach((post) => {
+            const container = document.getElementById('container');
+            newPost.title = post.title;
+            newPost.content = post.body;
+            const postContainer = document.createElement('div');
+            postContainer.classList.add('post');
+            postContainer.innerHTML = `<h2 class="title">Заголовок: ${newPost.title}</h2>
+            <p>Статья: ${newPost.content}</p>`;
+            container.append(postContainer);
+        })
+    });
 }
 
-addButton.addEventListener('click', createPost);
+renderPosts();

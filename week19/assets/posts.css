@@ -2,7 +2,11 @@ body {
     padding: 2rem;
 }
 
-.input-container {
-    display: flex;
-    justify-content: space-evenly;
+.post {
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+.title {
+    color: red;
 }
