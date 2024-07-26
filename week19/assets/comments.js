@@ -12,8 +12,9 @@ const renderPosts = () => {
             newPost.title = post.title;
             newPost.content = post.body;
             const postContainer = document.createElement('div');
-            postContainer.innerHTML = `<h2>${newPost.title}</h2>
-            <p>${newPost.content}</p>`;
+            postContainer.classList.add('post');
+            postContainer.innerHTML = `<h2 class="title">Заголовок: ${newPost.title}</h2>
+            <p>Статья: ${newPost.content}</p>`;
             container.append(postContainer);
         })
     });

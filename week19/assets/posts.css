@@ -1,0 +1,8 @@
+body {
+    padding: 2rem;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-evenly;
+}
