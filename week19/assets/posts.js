@@ -1,3 +1,4 @@
+const container = document.getElementById('container');
 const renderPosts = () => {
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
@@ -8,7 +9,6 @@ const renderPosts = () => {
         content: 'Статья',
         };
         posts.forEach((post) => {
-            const container = document.getElementById('container');
             newPost.title = post.title;
             newPost.content = post.body;
             const postContainer = document.createElement('div');
@@ -17,6 +17,9 @@ const renderPosts = () => {
             <p>Статья: ${newPost.content}</p>`;
             container.append(postContainer);
         })
+    })
+    .catch((error) => {
+        container.innerHTML = `<p>Не удалось отобразить посты: ${error}</p>`;
     });
 }
 

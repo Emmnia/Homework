@@ -21,6 +21,11 @@ const createPost = () => {
         <p>${post.body}</p>`;
         container.append(postContainer);
     })
+    .catch(error => {
+        const postContainer = document.createElement('div');
+        postContainer.innerHTML = `<p>Не удалось создать пост: ${error}</p>`;
+        container.append(postContainer);
+    });
     headingInput.value = '';
     textInput.value = '';
 }
