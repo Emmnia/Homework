@@ -3,7 +3,6 @@ const renderPosts = () => {
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
     .then((posts) => {
-        JSON.stringify(posts);
         let newPost = {
         title: 'Заголовок',
         content: 'Статья',
