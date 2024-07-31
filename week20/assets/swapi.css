@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Jedi';
+    src: url(./1351-font.otf);
+}
+
+body {
+    padding-top: 5rem;
+    text-align: center;
+    font-family: 'Jedi', sans-serif;
+    background-image: url(./sw_bg.png);
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: lighten;
+}
+
+select {
+    margin-right: 1rem;
+    padding: 0.5rem;
+    font-family: 'Jedi', sans-serif;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 20px #eee;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-family: 'Jedi', sans-serif;
+    border-radius: 5px;
+    border: none;
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    cursor: pointer;
+}
+
+button:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+#loading {
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid #f3f3f3;
+    border-top: 6px solid #9c41f2;
+    border-radius: 100%;
+    margin: 1rem auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+
+#loading.display {
+    visibility: visible;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+

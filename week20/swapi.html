@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/swapi.css">
+</head>
+<body>
+    <div class="search-params">
+        <h1>Кого или что будем искать?</h1>
+        <select id="category">
+            <option value="films">Фильмы</option>
+            <option value="people">Персонажей</option>
+            <option value="planets">Планеты</option>
+            <option value="species">Расы</option>
+            <option value="starships">Корабли</option>
+            <option value="vehicles">Транспорт</option>
+        </select>
+        <select id="number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <button type="button" id="searchButton">Вперёд!</button>
+    </div>
+    <div id="loading"></div>
+    <h2 id="result"></h2>
+    <h2 id="error"></h2>
+    <script src="assets/swapi.js"></script>
+</body>
+</html>
