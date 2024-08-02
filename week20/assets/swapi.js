@@ -10,7 +10,7 @@ const searchInfo = () => {
     loader.classList.add("display");
     let url = `https://swapi.py4e.com/api/${selectCategory.value}/${selectNumber.value}/`;
     fetch(url)
-    .then((response, reject) => {
+    .then((response) => {
         if (response.ok) {
             return response.json();
         } else {
