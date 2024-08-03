@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "chart.js": "^4.4.3"
+  }
+}
+"scripts": {
+  "build": "browserify main.js -o bundle.js"
+}
