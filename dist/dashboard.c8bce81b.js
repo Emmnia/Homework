@@ -1,0 +1,2 @@
+const e=document.querySelector("body"),t=e.querySelector("nav"),c=e.querySelector(".toggle"),r=e.querySelector(".search-box"),o=e.querySelector(".toggle-switch"),s=e.querySelector(".mode-text");c.addEventListener("click",()=>{t.classList.toggle("close")}),r.addEventListener("click",()=>{t.classList.remove("close")}),o.addEventListener("click",()=>{e.classList.toggle("dark"),e.classList.contains("dark")?s.innerText="Light mode":s.innerText="Dark mode"});
+//# sourceMappingURL=dashboard.c8bce81b.js.map
