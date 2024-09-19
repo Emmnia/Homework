@@ -1,0 +1,24 @@
+.card {
+    margin: 1rem;
+    padding: 1rem;
+    width: 40%;
+    border: 3px double black;
+    border-radius: 20px;
+    position: relative;
+}
+
+.name {
+    text-align: center;
+}
+
+.info {
+    margin-bottom: 1rem;
+    max-width: 100%;
+    text-align: center;
+}
+
+.image-container {
+    text-align: center;
+    max-width: 100%;
+    overflow: hidden;
+}
