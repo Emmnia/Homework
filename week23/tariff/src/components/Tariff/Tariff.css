@@ -1,0 +1,63 @@
+.card {
+    max-width: 20%;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.card div {
+    padding: 0.5rem 1rem;
+}
+
+.card .name,
+.price {
+    color: white;
+}
+
+.price-number {
+    font-size: 45px;
+}
+
+.speed {
+    background-color: #F8F8F8;
+}
+
+.traffic {
+    background-color: #EEEEEE;
+}
+
+.main {
+    box-shadow: 4px 9px 8px 0px rgba(34, 60, 80, 0.2);
+    transform: perspective(500px) translateZ(40px);
+}
+
+.name_blue {
+    background-color: #209DAB;
+}
+
+.price_blue {
+    background-color: #2CC1D5;
+}
+
+.name_green {
+    background-color: #218972;
+}
+
+.price_green {
+    background-color: #24AE8D;
+}
+
+.name_red {
+    background-color: #C4554E;
+}
+
+.price_red {
+    background-color: #F46A5F;
+}
+
+.name_black {
+    background-color: #282F37;
+}
+
+.price_black {
+    background-color: #333A44;
+}
