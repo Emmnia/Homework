@@ -26,7 +26,7 @@ export const Tariff = ({ price, speed }) => {
     return (
         <div className={"card " + (priceValue == 550 ? "main" : "")}>
             <div className={"name " + nameClass}><h2>Безлимитный {price}</h2></div>
-            <div className={"name " + priceClass}><p><sup>руб</sup> <span className="price-number">{price}</span> <sub>/мес</sub></p></div>
+            <div className={"price " + priceClass}><p><sup>руб</sup> <span className="price-number">{price}</span> <sub>/мес</sub></p></div>
             <div className="speed"><p>до {speed} Мбит/сек</p></div>
             <div className="traffic"><p>Объем включенного трафика не ограничен</p></div>
         </div>
