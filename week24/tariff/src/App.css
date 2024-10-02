@@ -1,0 +1,15 @@
+.container {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.checkout {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.checkout:disabled {
+  cursor: not-allowed;
+}
